@@ -44,7 +44,7 @@ digraph G {
 #+RESULTS:
 [[file:./07_dijkstra_algo/graph1.png]]
 *** graph2
-#+BEGIN_SRC dot :file ./07_dijkstra_algo/graph2.png :cmdline -Kdot -Tpng
+#+BEGIN_SRC dot :file ./07_dijkstra_algo/graph2.png :cmdline -Kdot -Tpng :exports results
 digraph G {
   size="9,9";
   rankdir="LR";
@@ -75,7 +75,7 @@ digraph G {
 #+RESULTS:
 [[file:./07_dijkstra_algo/graph2.png]]
 *** graph3
-#+BEGIN_SRC dot :file ./07_dijkstra_algo/graph3.png :cmdline -Kdot -Tpng
+#+BEGIN_SRC dot :file ./07_dijkstra_algo/graph3.png :cmdline -Kdot -Tpng :exports results
 digraph G {
   size="9,9";
   rankdir="LR";
@@ -101,7 +101,7 @@ digraph G {
 
 [2018-10-18 Thu 11:27]
 *** graph4
-#+BEGIN_SRC dot :file ./07_dijkstra_algo/graph4.png :cmdline -Kdot -Tpng
+#+BEGIN_SRC dot :file ./07_dijkstra_algo/graph4.png :cmdline -Kdot -Tpng :exports results
 digraph G {
   size="9,9";
   rankdir="LR";
@@ -120,7 +120,7 @@ digraph G {
 #+RESULTS:
 [[file:./07_dijkstra_algo/graph4.png]]
 *** graph5
-#+BEGIN_SRC dot :file ./07_dijkstra_algo/graph5.png :cmdline -Kdot -Tpng
+#+BEGIN_SRC dot :file ./07_dijkstra_algo/graph5.png :cmdline -Kdot -Tpng :exports results
 digraph G {
   size="9,9";
   rankdir="LR";
