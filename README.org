@@ -1,0 +1,176 @@
+#+TITLE: Grokking Algorithms Practice
+
+[[https://www.amazon.com/gp/product/1617292230][Grokking Algorithms]] ([[https://www.amazon.cn/dp/B06XKCV7X9/ref=sr_1_1?s=books&ie=UTF8&qid=1539786140&sr=1-1][算法图解]]) in golang, with tests. [[https://github.com/egonSchiele/grokking_algorithms][Offical repo]].
+
+--------
+
+* Table of contents
+** Ch01 - introduction
+*** [[file:01_intro/01_binary_search.go][01 binary search]]
+** Ch02 - selection sort
+*** [[file:02_selected_sort/02_selection_sort.go][02 selection sort]]
+** Ch03 - recursion
+*** [[file:03_recursion/03_factorial.go][03 recursion]]
+** Ch04 - quick sort
+*** [[file:04_quicksort/04_quick_sort.go][04 quick sort]]
+** Ch05 - hash table
+*** [[file:05_hash_tables/05_check_voter.go][05 check voter]]
+** Ch06 - breadth-first search
+*** [[file:06_breadth-first_search/06_bfs.go][06 bfs]]
+** Ch07 - Dijkstra's algorithm
+*** [[file:07_dijkstra_algo/07_dijkstra.go][dijkstra algo]]
+*** graph1
+#+BEGIN_SRC dot :file ./07_dijkstra_algo/graph1.png :cmdline -Kdot -Tpng
+digraph G {
+  size="9,9";
+  rankdir="LR";
+  label="graph1";
+  start [style=filled, shape=circle, label="start"];
+  a [style=filled, shape=circle, label="a"];
+  b [style=filled, shape=circle, label="b"];
+  fin [style=filled, shape=circle, label="fin"];
+
+
+  start -> a [label="6"];
+  start -> b [label="2"];
+
+  a -> fin [label="1"];
+
+  b -> a [label="3"];
+  b -> fin [label="5"];
+}
+#+END_SRC
+
+#+RESULTS:
+[[file:./07_dijkstra_algo/graph1.png]]
+*** graph2
+#+BEGIN_SRC dot :file ./07_dijkstra_algo/graph2.png :cmdline -Kdot -Tpng
+digraph G {
+  size="9,9";
+  rankdir="LR";
+  label="graph2";
+  start [style=filled, shape=circle, label="start"];
+  a [style=filled, shape=circle, label="a"];
+  b [style=filled, shape=circle, label="b"];
+  c [style=filled, shape=circle, label="c"];
+  d [style=filled, shape=circle, label="d"];
+  fin [style=filled, shape=circle, label="fin"];
+
+  start -> a [label="6"];
+  start -> b [label="2"];
+  start -> d [label="1"];
+
+  a -> c [label="2"];
+
+  b -> a [label="3"];
+  b -> fin [label="5"];
+
+  c -> fin [label="2"];
+
+  d -> b [label="4"];
+  d -> a [label="3"];
+}
+#+END_SRC
+
+#+RESULTS:
+[[file:./07_dijkstra_algo/graph2.png]]
+*** graph3
+#+BEGIN_SRC dot :file ./07_dijkstra_algo/graph3.png :cmdline -Kdot -Tpng
+digraph G {
+  size="9,9";
+  rankdir="LR";
+  label="graph3";
+  start [style=filled, shape=circle, label="start"];
+  a [style=filled, shape=circle, label="a"];
+  b [style=filled, shape=circle, label="b"];
+  fin [style=filled, shape=circle, label="fin"];
+
+
+  start -> a [label="6"];
+  start -> b [label="2"];
+
+  a -> b [label="2"];
+
+  b -> a [label="3"];
+  b -> fin [label="15"];
+}
+#+END_SRC
+
+#+RESULTS:
+[[file:./07_dijkstra_algo/graph3.png]]
+
+[2018-10-18 Thu 11:27]
+*** graph4
+#+BEGIN_SRC dot :file ./07_dijkstra_algo/graph4.png :cmdline -Kdot -Tpng
+digraph G {
+  size="9,9";
+  rankdir="LR";
+  label="graph4";
+  start [style=filled, shape=circle, label="start"];
+  a [style=filled, shape=circle, label="a"];
+  b [style=filled, shape=circle, label="b"];
+
+  start -> a [label="6"];
+  start -> b [label="2"];
+
+  a -> b [label="2"];
+}
+#+END_SRC
+
+#+RESULTS:
+[[file:./07_dijkstra_algo/graph4.png]]
+*** graph5
+#+BEGIN_SRC dot :file ./07_dijkstra_algo/graph5.png :cmdline -Kdot -Tpng
+digraph G {
+  size="9,9";
+  rankdir="LR";
+  label="graph5";
+  start [style=filled, shape=circle, label="start"];
+  a [style=filled, shape=circle, label="a"];
+  b [style=filled, shape=circle, label="b"];
+  c [style=filled, shape=circle, label="c"];
+  d [style=filled, shape=circle, label="d"];
+  fin [style=filled, shape=circle, label="fin"];
+
+  start -> a [label="6"];
+  start -> b [label="2"];
+  start -> d [label="5"];
+
+  a -> c [label="-2"];
+  a -> fin [label="1"];
+
+  b -> a [label="-3"];
+  b -> fin [label="5"];
+
+  c -> fin [label="2"];
+
+  d -> b [label="-4"];
+  d -> a [label="3"];
+}
+#+END_SRC
+
+#+RESULTS:
+[[file:./07_dijkstra_algo/graph5.png]]
+
+** Ch08 - greedy algorithm
+*** [[file:08_greedy_algo/08_set_covering.go][08 set covering]]
+** Ch09 - dynamic programming
+~cell[i][j] = max(cell[i-1][j], value[i] + cell[i-1][j-weight[i]])~
+*** traveling
+| 时间 | 评分 |                | 0.5 |   1 |   1.5 |     2 |
+|  0.5 |    7 | 威斯敏斯特教堂 |   7 |   7 |     7 |     7 |
+|  0.5 |    6 | 环球剧场       |   7 | 6+7 |   6+7 |   6+7 |
+|    1 |    9 | 英国国家美术馆 |   7 | 6+7 |   9+7 | 9+6+7 |
+|    2 |    9 | 大英博物馆     |   7 | 6+7 |   9+7 | 9+6+7 |
+|  0.5 |    8 | 圣保罗大教堂   |   8 | 8+7 | 8+6+7 | 8+9+7 |
+*** camping package
+| 重量 | 价值 |      | 1 |   2 |   3 |     4 |     5 |      6 |
+|    3 |   10 | 水   | x |   x |  10 |    10 |    10 |     10 |
+|    1 |    3 | 书   | 3 |   3 |  10 |  3+10 |  3+10 |   3+10 |
+|    2 |    9 | 食物 | 3 |   9 | 9+3 |   9+3 |  9+10 | 9+3+10 |
+|    2 |    5 | 夹克 | 3 |   9 | 9+3 |   5+9 |  9+10 | 9+3+10 |
+|    1 |    6 | 相机 | 6 | 6+3 | 6+9 | 6+9+3 | 6+5+9 | 6+9+10 |
+*** longest common subsequence
+[[file:09_dynamic_programming/09_longest.go][09 longest]]
+** Ch10 - k-nearest neighbours
+** Ch11 - next
