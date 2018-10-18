@@ -20,7 +20,7 @@
 ** Ch07 - Dijkstra's algorithm
 *** [[file:07_dijkstra_algo/07_dijkstra.go][dijkstra algo]]
 *** graph1
-#+BEGIN_SRC dot :file ./07_dijkstra_algo/graph1.png :cmdline -Kdot -Tpng
+#+BEGIN_SRC dot :file ./07_dijkstra_algo/graph1.png :cmdline -Kdot -Tpng :exports results
 digraph G {
   size="9,9";
   rankdir="LR";
