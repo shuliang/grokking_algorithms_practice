@@ -2,8 +2,6 @@
 
 [[https://www.amazon.com/gp/product/1617292230][Grokking Algorithms]] ([[https://www.amazon.cn/dp/B06XKCV7X9/ref=sr_1_1?s=books&ie=UTF8&qid=1539786140&sr=1-1][算法图解]]) in golang, with tests. [[https://github.com/egonSchiele/grokking_algorithms][Offical repo]].
 
---------
-
 * Table of contents
 ** Ch01 - introduction
 *** [[file:01_intro/01_binary_search.go][01 binary search]]
@@ -98,8 +96,6 @@ digraph G {
 
 #+RESULTS:
 [[file:./07_dijkstra_algo/graph3.png]]
-
-[2018-10-18 Thu 11:27]
 *** graph4
 #+BEGIN_SRC dot :file ./07_dijkstra_algo/graph4.png :cmdline -Kdot -Tpng :exports results
 digraph G {
