@@ -1,6 +1,6 @@
 #+TITLE: Grokking Algorithms Practice
 
-[[https://www.amazon.com/gp/product/1617292230][Grokking Algorithms]] ([[https://www.amazon.cn/dp/B06XKCV7X9/ref=sr_1_1?s=books&ie=UTF8&qid=1539786140&sr=1-1][算法图解]]) in golang, with tests. [[https://github.com/egonSchiele/grokking_algorithms][Offical repo]].
+[[https://www.amazon.com/gp/product/1617292230][Grokking Algorithms]] ([[https://www.amazon.cn/dp/B06XKCV7X9/ref=sr_1_1?s=books&ie=UTF8&qid=1539786140&sr=1-1][算法图解]]) in golang, with tests. [[https://github.com/egonSchiele/grokking_algorithms][Official repo]].
 
 * Table of contents
 ** Ch01 - introduction
